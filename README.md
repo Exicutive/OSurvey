@@ -1,4 +1,4 @@
-# [Surveyor Name] website
+# OSurvey website
 
 A premium, responsive Next.js website for an individual land surveyor.
 
