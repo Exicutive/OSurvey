@@ -23,7 +23,7 @@ This project includes a [`render.yaml`](./render.yaml) Blueprint for a Node web 
 
 1. Push this folder to a GitHub, GitLab, or Bitbucket repository.
 2. In Render, choose **New** → **Blueprint** and connect that repository.
-3. Confirm the `osurvey` web service, then create it. Render will install dependencies, run the production build, and start the Next.js server.
+3. Confirm the `osurvey` web service, then create it. Render will install dependencies, run the production build, and start the Next.js server. The build deliberately installs from `package.json` with `--package-lock=false`: the current lockfile contains platform-specific optional dependencies that npm rejects on Render's Linux hosts.
 4. Once Render assigns the public `onrender.com` URL, open the service's **Environment** tab and set `NEXT_PUBLIC_SITE_URL` to that full HTTPS URL (or to the final custom domain). Redeploy after saving it.
 
 `ENQUIRY_RECIPIENT_EMAIL` is deliberately not included in the Render configuration: the current API route does not send mail yet, so adding an email address would not make enquiries deliverable. Add a transactional-email or CRM integration before treating the contact forms as live.
