@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: osurvey
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 20.18.0
+      # Set this in the Render dashboard after the service URL is known.
+      # Example: https://osurvey.onrender.com
+      - key: NEXT_PUBLIC_SITE_URL
+        sync: false
