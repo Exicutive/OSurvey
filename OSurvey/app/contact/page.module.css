@@ -12,7 +12,7 @@
 .map {
   overflow: hidden;
   border: 1px solid var(--line);
-  line-height: 0;
+  background: var(--cream);
 }
 
 .map iframe {
@@ -20,6 +20,17 @@
   width: 100%;
   height: min(460px, 55vw);
   border: 0;
+}
+
+.mapLink {
+  display: inline-flex;
+  margin: 14px 16px;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: var(--bronze);
+  text-underline-offset: 4px;
 }
 
 @media (max-width: 800px) {
