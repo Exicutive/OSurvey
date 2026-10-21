@@ -6,11 +6,12 @@ import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { navItems, site } from "../lib/site";
+import styles from "./header.module.css";
 
 export function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  return <header className="site-header">
+  return <header className={`site-header ${styles.header}`}>
     <div className="shell nav-wrap">
       <Link href="/" className="wordmark" onClick={() => setOpen(false)} aria-label={`${site.name} home`}>
         <Image className="company-logo" src="/images/lutex-survey-logo-cropped.jpeg" width={690} height={560} priority alt="Lutex Survey & Planning Services" />
