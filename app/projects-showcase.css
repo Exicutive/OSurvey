@@ -10,6 +10,7 @@
 .project-section .project-card:hover{transform:translateY(-7px);box-shadow:0 24px 43px rgba(9,43,131,.15)}
 .project-section .project-image{position:relative;min-height:100%;aspect-ratio:auto;overflow:hidden;background:var(--deep)}
 .project-section .project-card--large .project-image{height:100%;min-height:577px}
+.project-section .project-card--large .project-image img{object-position:center center}
 .project-section .project-image:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,23,75,.06) 30%,rgba(6,23,75,.78) 100%)}
 .project-section .project-card:not(.project-card--large) .project-image:after{background:linear-gradient(135deg,rgba(6,23,75,.1),rgba(6,23,75,.43))}
 .project-section .project-image img{transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .35s ease;filter:saturate(.8) contrast(1.04)}

@@ -1,18 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
-  <title id="title">Topographic survey map</title><desc id="desc">An abstract topographic map with elevation contours, property boundary and measured points.</desc>
-  <rect width="1200" height="800" fill="#06174b"/>
-  <g fill="none" stroke="#7eaaff" stroke-width="3" opacity=".82">
-    <path d="M-40 165C110 40 230 76 311 176s207 116 296 7 214-130 329-38 171 66 304-71"/>
-    <path d="M-40 205C105 85 222 113 298 208s219 117 322 8 216-122 328-34 171 72 292-54"/>
-    <path d="M-40 249C92 141 213 151 284 240s230 124 348 12 213-113 326-24 173 81 281-36"/>
-    <path d="M-40 298C76 203 196 199 273 286s244 134 374 18 210-102 322-14 171 89 265-20"/>
-    <path d="M-40 353C61 271 180 252 264 338s256 145 401 27 205-91 318-5 167 97 247-5"/>
-    <path d="M-40 412C43 338 168 306 257 391s270 155 427 39 200-77 310 6 161 102 228 13"/>
-    <path d="M-40 474C26 405 158 362 253 447s284 161 448 52 193-62 301 15 150 104 207 27"/>
-    <path d="M-40 538C7 474 147 420 250 507s295 168 468 66 186-46 291 23 139 104 189 39"/>
-    <path d="M-40 604C-5 546 138 478 252 567s304 175 484 80 177-27 278 31 128 101 170 51"/>
+  <title id="title">Topographic terrain model</title>
+  <desc id="desc">A refined terrain map with contour lines, a measured site boundary, survey control points and coordinate grid.</desc>
+  <defs>
+    <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07194f"/><stop offset=".55" stop-color="#0b318d"/><stop offset="1" stop-color="#061746"/></linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#a9c9ff" stroke-opacity=".09"/></pattern>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="8" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="800" fill="url(#surface)"/><rect width="1200" height="800" fill="url(#grid)"/>
+  <g fill="none" stroke="#72a2ff" stroke-width="3" opacity=".69">
+    <path d="M-90 70C87-22 181 42 276 151s230 93 334-23 211-133 335-26 181 80 356-42"/>
+    <path d="M-82 119C71 35 173 88 267 195s242 97 357-28 215-134 333-29 174 88 340-23"/>
+    <path d="M-77 173C61 100 166 134 262 239s251 106 372-28 216-133 329-34 169 95 325-5"/>
+    <path d="M-72 233C48 168 162 186 261 289s258 115 387-28 216-126 324-38 163 102 309 16"/>
+    <path d="M-65 298C36 237 160 239 264 340s264 125 400-25 213-115 317-40 156 106 292 34"/>
+    <path d="M-56 367C25 311 160 296 271 395s270 135 412-20 208-100 307-40 149 108 273 51"/>
+    <path d="M-45 439C15 386 162 355 281 451s273 146 426-13 200-82 295-38 140 108 254 65"/>
+    <path d="M-31 513C8 462 168 417 295 510s276 155 439-6 190-63 281-31 130 104 236 75"/>
+    <path d="M-15 589C4 539 177 480 311 570s278 162 452 2 179-45 266-20 119 98 217 82"/>
+    <path d="M3 667C0 617 188 545 329 631s280 169 463 9 168-29 251-10 110 91 204 90"/>
   </g>
-  <path d="M125 670 366 183 780 110 1034 316 902 654 467 711Z" fill="#0c3a9a" fill-opacity=".46" stroke="#ff7644" stroke-width="5" stroke-dasharray="15 12"/>
-  <g fill="#ff7644"><circle cx="366" cy="183" r="11"/><circle cx="780" cy="110" r="11"/><circle cx="1034" cy="316" r="11"/><circle cx="902" cy="654" r="11"/><circle cx="467" cy="711" r="11"/></g>
-  <g fill="#fff" font-family="Arial, sans-serif"><text x="80" y="92" font-size="25" letter-spacing="6">TOPOGRAPHIC SURVEY</text><text x="80" y="130" font-size="15" fill="#a9c9ff" letter-spacing="3">ELEVATION · FEATURES · SITE CONTROL</text><text x="1010" y="736" font-size="18" text-anchor="end" fill="#ffb08b">0.25 m CONTOUR</text></g>
+  <g opacity=".2" fill="none" stroke="#ffb08b" stroke-width="1"><path d="M600 0V800M0 400H1200"/><circle cx="600" cy="400" r="160"/><circle cx="600" cy="400" r="250"/></g>
+  <path d="M305 190 722 137 973 323 847 633 431 662 198 466Z" fill="#123fb5" fill-opacity=".28" stroke="#ff7644" stroke-width="6" stroke-dasharray="16 14"/>
+  <path d="M305 190 722 137 973 323 847 633 431 662 198 466Z" fill="none" stroke="#ffb08b" stroke-opacity=".2" stroke-width="18" filter="url(#glow)"/>
+  <g fill="#ff7644"><circle cx="305" cy="190" r="13"/><circle cx="722" cy="137" r="13"/><circle cx="973" cy="323" r="13"/><circle cx="847" cy="633" r="13"/><circle cx="431" cy="662" r="13"/><circle cx="198" cy="466" r="13"/></g>
+  <g fill="none" stroke="#fff" stroke-width="2" opacity=".85"><path d="M586 400h28m-14-14v28"/><circle cx="600" cy="400" r="31"/></g>
+  <g fill="#a9c9ff" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="3" opacity=".88"><text x="489" y="118">N 06° 28' 14.2&quot;</text><text x="777" y="690">E 003° 25' 08.6&quot;</text></g>
 </svg>
