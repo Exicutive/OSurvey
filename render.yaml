@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: osurvey
+    runtime: node
+    plan: free
+    # The committed lockfile has an optional, cross-platform dependency tree
+    # that npm rejects on Render's Linux hosts. Install from package.json here.
+    buildCommand: npm install --package-lock=false --no-audit --no-fund && npm run build
+    startCommand: npm start
+    healthCheckPath: /
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 20.18.0
+      # Set this in the Render dashboard after the service URL is known.
+      # Example: https://osurvey.onrender.com
+      - key: NEXT_PUBLIC_SITE_URL
+        sync: false

@@ -1,0 +1,44 @@
+.location {
+  padding: 80px 0 0;
+  background: var(--paper);
+}
+
+.location h2 {
+  max-width: 640px;
+  margin-bottom: 32px;
+  font-size: clamp(2.1rem, 4vw, 3.4rem);
+}
+
+.map {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--cream);
+}
+
+.map iframe {
+  display: block;
+  width: 100%;
+  height: min(460px, 55vw);
+  border: 0;
+}
+
+.mapLink {
+  display: inline-flex;
+  margin: 14px 16px;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: var(--bronze);
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 800px) {
+  .location {
+    padding-top: 60px;
+  }
+
+  .map iframe {
+    height: 320px;
+  }
+}
