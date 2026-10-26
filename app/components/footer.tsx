@@ -12,6 +12,6 @@ export function Footer() {
       <div><h2>Core services</h2>{services.slice(0, 4).map((item) => <Link key={item.slug} href={`/services#${item.slug}`}>{item.title}</Link>)}</div>
       <div className="footer-contact-block"><h2>Speak with us</h2><p>{site.serviceArea}</p><a href={`tel:${site.phoneHref}`}>{site.phone}</a><a href={`https://wa.me/${site.whatsapp}`}>WhatsApp: {site.whatsappDisplay}</a><p>{site.email}</p><Link href="/contact" className="footer-contact">Contact details <ArrowUpRight size={16} /></Link></div>
     </div>
-    <div className="shell legal"><span>© {year} {site.name}. All rights reserved.</span><div><Link href="/privacy">Privacy policy</Link><span>Precision in every point.</span></div></div>
+    <div className="shell legal"><span>© {year} {site.name}. All rights reserved.</span><div><Link href="/privacy">Privacy policy</Link></div></div>
   </footer>;
 }
