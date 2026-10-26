@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import "./brand.css";
 import { Footer } from "./components/footer";
 import { Header } from "./components/header";
 import { site } from "./lib/site";
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-export const viewport: Viewport = { themeColor: "#12382f", colorScheme: "light" };
+export const viewport: Viewport = { themeColor: "#092b83", colorScheme: "light" };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="en"><body><Header />{children}<Footer /></body></html>;
