@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import "./brand.css";
+import "./projects-showcase.css";
 import { Footer } from "./components/footer";
 import { Header } from "./components/header";
 import { site } from "./lib/site";

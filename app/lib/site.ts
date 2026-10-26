@@ -83,9 +83,9 @@ export const services: Service[] = [
 ];
 
 export const projectPlaceholders = [
-  { category: "Development site", title: "Project portfolio item", image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=85" },
-  { category: "Land mapping", title: "Project portfolio item", image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1400&q=85" },
-  { category: "Field survey", title: "Project portfolio item", image: "https://images.unsplash.com/photo-1524498250077-390f9e378fc0?auto=format&fit=crop&w=1400&q=85" },
+  { category: "Topographic survey", title: "Site context & terrain mapping", description: "Measured terrain and visible features, structured for confident design decisions.", image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=85" },
+  { category: "Land information", title: "Spatial data for land decisions", description: "Clear location intelligence for property, planning and development teams.", image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1400&q=85" },
+  { category: "Field control", title: "Precision on active sites", description: "Survey control that helps plans translate accurately on the ground.", image: "https://images.unsplash.com/photo-1524498250077-390f9e378fc0?auto=format&fit=crop&w=1400&q=85" },
 ] as const;
 
 export function absoluteUrl(path = "/") {
