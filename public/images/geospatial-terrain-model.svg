@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Geospatial terrain model</title><desc id="desc">A stylized digital terrain model with contour layers, grid points, and survey data paths.</desc>
+  <defs><linearGradient id="ground" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#092b83"/><stop offset="1" stop-color="#c81055"/></linearGradient><pattern id="grid" width="52" height="52" patternUnits="userSpaceOnUse"><path d="M52 0H0V52" fill="none" stroke="#a9c9ff" stroke-opacity=".18"/></pattern></defs>
+  <rect width="1200" height="800" fill="#f1f6ff"/><rect width="1200" height="800" fill="url(#grid)"/>
+  <path d="M0 608 129 490 260 548 401 309 535 407 678 174 797 282 937 106 1200 255V800H0Z" fill="url(#ground)"/>
+  <g fill="none" stroke="#ffb08b" stroke-width="4" opacity=".92"><path d="M0 645 130 531 260 589 401 350 535 448 678 215 797 323 937 147 1200 296"/><path d="M0 690 132 577 262 635 403 397 537 495 680 263 799 371 939 195 1200 344"/><path d="M0 736 134 623 264 681 405 445 539 543 682 311 801 419 941 243 1200 393"/></g>
+  <g fill="#f1652f"><circle cx="401" cy="309" r="12"/><circle cx="678" cy="174" r="12"/><circle cx="937" cy="106" r="12"/></g><g fill="none" stroke="#f1652f" stroke-width="3"><circle cx="401" cy="309" r="26"/><circle cx="678" cy="174" r="26"/><circle cx="937" cy="106" r="26"/></g>
+  <g fill="#06174b" font-family="Arial, sans-serif"><text x="77" y="91" font-size="25" font-weight="700" letter-spacing="5">GIS / GEOSPATIAL MODEL</text><text x="79" y="130" font-size="15" fill="#4d5a7a" letter-spacing="3">CAPTURE · ANALYSE · COMMUNICATE</text></g>
+  <g font-family="Arial, sans-serif" font-size="14" fill="#fff"><text x="418" y="300">CONTROL 01</text><text x="695" y="165">CONTROL 02</text><text x="954" y="97">CONTROL 03</text></g>
+</svg>

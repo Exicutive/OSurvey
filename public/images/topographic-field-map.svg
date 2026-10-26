@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Topographic survey map</title><desc id="desc">An abstract topographic map with elevation contours, property boundary and measured points.</desc>
+  <rect width="1200" height="800" fill="#06174b"/>
+  <g fill="none" stroke="#7eaaff" stroke-width="3" opacity=".82">
+    <path d="M-40 165C110 40 230 76 311 176s207 116 296 7 214-130 329-38 171 66 304-71"/>
+    <path d="M-40 205C105 85 222 113 298 208s219 117 322 8 216-122 328-34 171 72 292-54"/>
+    <path d="M-40 249C92 141 213 151 284 240s230 124 348 12 213-113 326-24 173 81 281-36"/>
+    <path d="M-40 298C76 203 196 199 273 286s244 134 374 18 210-102 322-14 171 89 265-20"/>
+    <path d="M-40 353C61 271 180 252 264 338s256 145 401 27 205-91 318-5 167 97 247-5"/>
+    <path d="M-40 412C43 338 168 306 257 391s270 155 427 39 200-77 310 6 161 102 228 13"/>
+    <path d="M-40 474C26 405 158 362 253 447s284 161 448 52 193-62 301 15 150 104 207 27"/>
+    <path d="M-40 538C7 474 147 420 250 507s295 168 468 66 186-46 291 23 139 104 189 39"/>
+    <path d="M-40 604C-5 546 138 478 252 567s304 175 484 80 177-27 278 31 128 101 170 51"/>
+  </g>
+  <path d="M125 670 366 183 780 110 1034 316 902 654 467 711Z" fill="#0c3a9a" fill-opacity=".46" stroke="#ff7644" stroke-width="5" stroke-dasharray="15 12"/>
+  <g fill="#ff7644"><circle cx="366" cy="183" r="11"/><circle cx="780" cy="110" r="11"/><circle cx="1034" cy="316" r="11"/><circle cx="902" cy="654" r="11"/><circle cx="467" cy="711" r="11"/></g>
+  <g fill="#fff" font-family="Arial, sans-serif"><text x="80" y="92" font-size="25" letter-spacing="6">TOPOGRAPHIC SURVEY</text><text x="80" y="130" font-size="15" fill="#a9c9ff" letter-spacing="3">ELEVATION · FEATURES · SITE CONTROL</text><text x="1010" y="736" font-size="18" text-anchor="end" fill="#ffb08b">0.25 m CONTOUR</text></g>
+</svg>
