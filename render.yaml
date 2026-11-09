@@ -12,7 +12,6 @@ services:
     envVars:
       - key: NODE_VERSION
         value: 20.18.0
-      # Set this in the Render dashboard after the service URL is known.
-      # Example: https://osurvey.onrender.com
+      # Canonical domain used in metadata, structured data and sitemap.
       - key: NEXT_PUBLIC_SITE_URL
-        sync: false
+        value: https://www.lutexspatial.com

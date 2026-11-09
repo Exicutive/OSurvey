@@ -2,14 +2,15 @@ import type { Metadata } from "next";
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { EnquiryForm } from "../components/enquiry-form";
 import { PageHero } from "../components/page-hero";
+import { pageMetadata } from "../lib/metadata";
 import { site } from "../lib/site";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description: "Contact [Surveyor Name] about your land surveying or geospatial project.",
-  alternates: { canonical: "/contact" },
-};
+export const metadata: Metadata = pageMetadata({
+  title: "Contact a Land Surveyor in Lagos",
+  description: "Contact Lutex Survey & Planning Services about cadastral, boundary, topographic, construction or geospatial surveying in Lagos, Nigeria.",
+  path: "/contact",
+});
 
 const mapQuery = "Lagos Business School, Lekki, Lagos";
 const mapEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(mapQuery)}&z=15&output=embed`;
@@ -44,7 +45,7 @@ export default function ContactPage() {
         <div className="shell contact-grid">
           <div className="contact-details">
             <p className="eyebrow">Contact details</p>
-            {contacts.map(({ icon: Icon, title, value, href }) => (
+            {contacts.filter(({ title }) => title !== "Email" || site.email.includes("@")).map(({ icon: Icon, title, value, href }) => (
               <div className="contact-item" key={title}>
                 <Icon aria-hidden="true" />
                 <div>

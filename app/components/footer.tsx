@@ -10,7 +10,7 @@ export function Footer() {
       <div className="footer-intro"><Link href="/" className="wordmark footer-mark"><Image className="company-logo" src="/images/lutex-survey-logo-cropped.jpeg" width={690} height={560} alt="Lutex Survey & Planning Services" /></Link><p>MAPPING YOUR DESIRE.</p></div>
       <div><h2>Explore</h2>{navItems.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}</div>
       <div><h2>Core services</h2>{services.slice(0, 4).map((item) => <Link key={item.slug} href={`/services#${item.slug}`}>{item.title}</Link>)}</div>
-      <div className="footer-contact-block"><h2>Speak with us</h2><p>{site.serviceArea}</p><a href={`tel:${site.phoneHref}`}>{site.phone}</a><a href={`https://wa.me/${site.whatsapp}`}>WhatsApp: {site.whatsappDisplay}</a><p>{site.email}</p><Link href="/contact" className="footer-contact">Contact details <ArrowUpRight size={16} /></Link></div>
+      <div className="footer-contact-block"><h2>Speak with us</h2><p>{site.serviceArea}</p><a href={`tel:${site.phoneHref}`}>{site.phone}</a><a href={`https://wa.me/${site.whatsapp}`}>WhatsApp: {site.whatsappDisplay}</a>{site.email.includes("@") && <a href={`mailto:${site.email}`}>{site.email}</a>}<Link href="/contact" className="footer-contact">Contact details <ArrowUpRight size={16} /></Link></div>
     </div>
     <div className="shell legal"><span>© {year} {site.name}. All rights reserved.</span><div><Link href="/privacy">Privacy policy</Link></div></div>
   </footer>;

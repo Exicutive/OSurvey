@@ -4,14 +4,16 @@ import { ArrowRight, Building2, ClipboardCheck, Compass, Map, Route, Waves } fro
 import { Button } from "../components/button";
 import { PageHero } from "../components/page-hero";
 import { StructuredData } from "../components/structured-data";
+import { pageMetadata } from "../lib/metadata";
 import { jsonLd } from "../lib/seo";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
-  title: "About",
-  description: "Learn about our collaborative approach to land surveying, cadastral work, topographic mapping and project delivery.",
-  alternates: { canonical: "/about" },
-};
+export const metadata: Metadata = pageMetadata({
+  title: "About Our Surveying Practice",
+  description: "Meet Lutex Survey & Planning Services: collaborative land surveying and geospatial work in Lagos, from cadastral plans to topographic mapping and construction setting-out.",
+  path: "/about",
+  image: "/images/about-profile.jpg",
+});
 
 const services = [
   { title: "Road construction surveys", icon: Route },
@@ -26,7 +28,7 @@ const services = [
 export default function AboutPage() {
   return (
     <main>
-      <StructuredData data={jsonLd("person")} />
+      <StructuredData data={jsonLd("business")} />
       <PageHero
         eyebrow="About"
         title="Surveying and planning experience built around the needs of each project."

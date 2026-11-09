@@ -2,8 +2,8 @@ export const site = {
   name: "Lutex Survey & Planning Services",
   shortName: "Lutex",
   description:
-    "Professional land surveying and planning services for clear, confident land decisions.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://example.com",
+    "Land surveying and geospatial services in Lagos, Nigeria, including cadastral, boundary, topographic, construction setting-out and GIS surveys.",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.lutexspatial.com",
   phone: "+234 707 621 2073",
   phoneHref: "+2347076212073",
   email: "[Email address]",

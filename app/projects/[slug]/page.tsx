@@ -4,6 +4,9 @@ import type { Metadata } from "next";
 import { ArrowLeft, ArrowRight, MapPin, MoveUpRight } from "lucide-react";
 import { notFound } from "next/navigation";
 import { Button } from "../../components/button";
+import { StructuredData } from "../../components/structured-data";
+import { pageMetadata } from "../../lib/metadata";
+import { breadcrumbJsonLd } from "../../lib/seo";
 import { estateProjects } from "../../lib/site";
 import styles from "./page.module.css";
 
@@ -24,9 +27,11 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   }
 
   return {
-    title: project.name,
-    description: `${project.name} in ${project.location} — estate surveying, land documentation and project details.`,
-    alternates: { canonical: `/projects/${project.slug}` },
+    ...pageMetadata({
+      title: `${project.name} Surveying Project`,
+      description: `${project.surveySummary} Estate survey project in ${project.location}.`,
+      path: `/projects/${project.slug}`,
+    }),
   };
 }
 
@@ -43,6 +48,11 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
   return (
     <main>
+      <StructuredData data={breadcrumbJsonLd([
+        { name: "Home", path: "/" },
+        { name: "Projects", path: "/projects" },
+        { name: project.name, path: `/projects/${project.slug}` },
+      ])} />
       <section className={styles.hero}>
         <Image
           src={project.image}

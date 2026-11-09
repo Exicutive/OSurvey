@@ -4,14 +4,15 @@ import type { Metadata } from "next";
 import { ArrowDownRight, MapPin, MoveUpRight } from "lucide-react";
 import { Button } from "../components/button";
 import { PageHero } from "../components/page-hero";
+import { pageMetadata } from "../lib/metadata";
 import { estateProjects, projectDeliverables } from "../lib/site";
 import styles from "./page.module.css";
 
-export const metadata: Metadata = {
-  title: "Estate Surveying Projects",
-  description: "Geomatics and engineering surveying across premium residential, commercial and resort estates, from master plan parcellation to statutory survey documentation.",
-  alternates: { canonical: "/projects" },
-};
+export const metadata: Metadata = pageMetadata({
+  title: "Land Surveying Projects in Lagos & Abuja",
+  description: "Explore estate surveying projects covering master plan parcellation, cadastral and boundary surveys, topographic mapping, beaconing and survey documentation.",
+  path: "/projects",
+});
 
 export default function ProjectsPage() {
   return (

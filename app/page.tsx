@@ -4,15 +4,22 @@ import { ArrowDownRight, ArrowRight, Check, Compass, MapPinned, MoveUpRight } fr
 import { Button } from "./components/button";
 import { ServiceIcon } from "./components/icons";
 import { StructuredData } from "./components/structured-data";
+import { pageMetadata } from "./lib/metadata";
 import { jsonLd } from "./lib/seo";
 import { featuredProjects, services } from "./lib/site";
+
+export const metadata = pageMetadata({
+  title: "Land Surveying & Geospatial Services in Lagos",
+  description: "Professional land surveying in Lagos, Nigeria. Cadastral and boundary surveys, topographic mapping, construction setting-out, hydrographic surveys and GIS.",
+  path: "/",
+});
 
 const heroImage = "/images/field-surveyor-total-station.jpg";
 
 export default function Home() {
   return <main>
     <StructuredData data={jsonLd("website")} />
-    <StructuredData data={jsonLd("person")} />
+    <StructuredData data={jsonLd("business")} />
     <section className="hero">
       <div className="shell hero-grid"><div className="hero-copy"><p className="eyebrow"><span /> Land surveying · geospatial services</p><h1>Land surveying &<br /><em>geospatial</em> services.</h1><p className="lede">Boundary and cadastral surveys, topographic mapping, construction set-out, hydrographic survey and GIS data for property, development and infrastructure projects.</p><div className="hero-actions"><Button href="/request-a-survey">Request a Plan <ArrowRight size={17} /></Button><Button href="/services" variant="outline">Explore Services</Button></div><div className="hero-detail"><Compass aria-hidden="true" /><span>Boundary · terrain · location data</span></div><div className="hero-markers" aria-label="Core survey capabilities"><span>Field precision</span><span>Spatial intelligence</span><span>Clear deliverables</span></div></div>
       <div className="hero-visual"><Image src={heroImage} alt="Professional surveyor operating a total station on an active site" fill priority sizes="(max-width: 900px) 100vw, 50vw" /><div className="hero-coordinate hero-coordinate--one" aria-hidden="true" /><div className="hero-coordinate hero-coordinate--two" aria-hidden="true" /><div className="hero-badge"><span>Survey-grade data</span><strong>Land & location,<br />clearly mapped</strong></div></div></div>
