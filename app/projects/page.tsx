@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { Metadata } from "next";
 import { ArrowDownRight, MapPin, MoveUpRight } from "lucide-react";
 import { Button } from "../components/button";
@@ -8,7 +9,7 @@ import styles from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "Estate Surveying Projects",
-  description: "Geomatics and engineering surveying across Landmark Corporate Realty’s premium estates, from master plan parcellation to statutory survey documentation.",
+  description: "Geomatics and engineering surveying across premium residential, commercial and resort estates, from master plan parcellation to statutory survey documentation.",
   alternates: { canonical: "/projects" },
 };
 
@@ -18,7 +19,7 @@ export default function ProjectsPage() {
       <PageHero
         eyebrow="Project portfolio"
         title="From master plan to clearly marked ground."
-        intro="Geomatics and engineering surveying across Landmark Corporate Realty’s premium residential and commercial estates—turning land concepts into precise layouts, verified boundaries and statutory survey documentation."
+        intro="Geomatics and engineering surveying across premium residential and commercial estates—turning land concepts into precise layouts, verified boundaries and statutory survey documentation."
       >
         <div className={styles.heroMeta}>
           <span><MapPin aria-hidden="true" /> Lagos & Abuja</span>
@@ -33,7 +34,7 @@ export default function ProjectsPage() {
             <h2>One connected survey process.<br /><em>From concept to allocation.</em></h2>
           </div>
           <div className={styles.introBody}>
-            <p>Across Landmark Corporate Realty’s estate portfolio, surveying connected the master plan to the physical site and its legal records. The work combined precise land division, boundary evidence, terrain information, plot beaconing and construction checks.</p>
+            <p>Across the estate portfolio, surveying connected master plans to physical sites and their records. The work combined precise land division, boundary verification, terrain information, plot beaconing and construction checks.</p>
             <div className={styles.allocationNote}>
               <span>300 / 500</span>
               <p>Standardized residential plot allocations, with commercial parcels incorporated into estate layouts.</p>
@@ -73,11 +74,11 @@ export default function ProjectsPage() {
               <p className="eyebrow">Featured estates</p>
               <h2>Selected work<br /><em>across the portfolio.</em></h2>
             </div>
-            <p>Estate developments supported through Landmark Corporate Realty’s premium residential, commercial and resort portfolio.</p>
+            <p>Residential, commercial and resort developments supported through coordinated field, engineering and cadastral surveying.</p>
           </div>
           <div className={styles.estateGrid}>
             {estateProjects.map((project, index) => (
-              <article className={styles.estateCard} id={project.slug} key={project.slug}>
+              <Link className={styles.estateCard} href={`/projects/${project.slug}`} key={project.slug} aria-label={`View project details: ${project.name}`}>
                 <div className={styles.estateImage}>
                   <Image src={project.image} alt={project.imageAlt} fill sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 25vw" />
                   <span>{String(index + 1).padStart(2, "0")}</span>
@@ -88,7 +89,7 @@ export default function ProjectsPage() {
                   <h3>{project.name}</h3>
                   <p>{project.description}</p>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>

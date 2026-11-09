@@ -1,0 +1,377 @@
+.hero {
+  position: relative;
+  display: flex;
+  min-height: min(660px, 72vw);
+  align-items: flex-end;
+  overflow: hidden;
+  color: #fff;
+  background: var(--deep);
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: center 54%;
+  filter: saturate(.8);
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(6, 23, 75, .88), rgba(6, 23, 75, .32) 68%), linear-gradient(0deg, rgba(6, 23, 75, .67), transparent 60%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  padding-top: 40px;
+  padding-bottom: 82px;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 72px;
+  color: rgba(255, 255, 255, .76);
+  font-size: 11px;
+}
+
+.breadcrumbs a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.breadcrumbs span:last-child {
+  color: #fff;
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  color: #ffad85;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 900px;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(3rem, 8vw, 6.7rem);
+  line-height: .98;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 22px 0 0;
+  color: #e2eaff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.location svg {
+  width: 17px;
+  color: #ffad85;
+}
+
+.heroIndex {
+  position: absolute;
+  z-index: 1;
+  right: max(24px, calc((100vw - 1180px) / 2));
+  bottom: 40px;
+  color: rgba(255, 255, 255, .8);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .14em;
+}
+
+.overview {
+  padding: 100px 0;
+  background: #fff;
+}
+
+.overview > div {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 10%;
+}
+
+.overviewTitle h2,
+.scopeHeading h2,
+.closing h2 {
+  margin: 0;
+  color: var(--deep);
+  font-size: clamp(2.4rem, 4.7vw, 4.2rem);
+}
+
+.overviewTitle h2 em,
+.scopeHeading h2 em {
+  color: var(--magenta);
+}
+
+.overviewCopy > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.projectFacts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+  margin-top: 36px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.projectFacts div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.projectFacts span {
+  color: var(--magenta);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.projectFacts strong {
+  color: var(--blue);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.scope {
+  padding: 104px 0;
+  background: #f3f6ff;
+}
+
+.scopeHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 42px;
+}
+
+.scopeHeading > p {
+  max-width: 390px;
+  margin: 0 0 6px;
+  padding-left: 18px;
+  border-left: 2px solid var(--orange);
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.scopeGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid rgba(9, 43, 131, .15);
+  border-left: 1px solid rgba(9, 43, 131, .15);
+}
+
+.scopeItem {
+  display: grid;
+  grid-template-columns: 35px 1fr;
+  gap: 16px;
+  min-height: 170px;
+  padding: 25px;
+  border-right: 1px solid rgba(9, 43, 131, .15);
+  border-bottom: 1px solid rgba(9, 43, 131, .15);
+  background: rgba(255, 255, 255, .78);
+}
+
+.scopeItem > span {
+  color: var(--magenta);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.scopeItem h3 {
+  margin: 0 0 9px;
+  color: var(--blue);
+  font-size: 18px;
+}
+
+.scopeItem p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.projectNav {
+  padding: 30px 0;
+  background: #fff;
+}
+
+.projectNav > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.backLink,
+.nextLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.backLink svg,
+.nextLink svg {
+  width: 17px;
+  color: var(--magenta);
+}
+
+.nextLink {
+  display: grid;
+  grid-template-columns: 1fr 18px;
+  gap: 3px 14px;
+  text-align: right;
+}
+
+.nextLink span {
+  grid-column: 1;
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.nextLink strong {
+  grid-column: 1;
+}
+
+.nextLink svg {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+.closing {
+  padding: 66px 0;
+  color: #fff;
+  background: linear-gradient(115deg, var(--deep), #123fb5);
+}
+
+.closing > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.closing .eyebrow {
+  color: #ffad85;
+}
+
+.closing h2 {
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+}
+
+.closing h2 em {
+  color: #ffad85;
+}
+
+.closing .button {
+  flex: 0 0 auto;
+  color: #fff;
+  border-color: rgba(255, 255, 255, .65);
+}
+
+@media (max-width: 800px) {
+  .hero {
+    min-height: 560px;
+  }
+
+  .heroContent {
+    padding-bottom: 70px;
+  }
+
+  .breadcrumbs {
+    margin-bottom: 58px;
+  }
+
+  .overview {
+    padding: 78px 0;
+  }
+
+  .overview > div {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .scopeHeading {
+    display: block;
+  }
+
+  .scopeHeading > p {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  .hero {
+    min-height: 520px;
+  }
+
+  .heroOverlay {
+    background: linear-gradient(90deg, rgba(6, 23, 75, .79), rgba(6, 23, 75, .25)), linear-gradient(0deg, rgba(6, 23, 75, .72), transparent 70%);
+  }
+
+  .heroContent {
+    padding-bottom: 76px;
+  }
+
+  .breadcrumbs {
+    margin-bottom: 74px;
+    font-size: 10px;
+  }
+
+  .heroIndex {
+    right: 20px;
+    bottom: 26px;
+  }
+
+  .projectFacts {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .scope {
+    padding: 76px 0;
+  }
+
+  .scopeGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .scopeItem {
+    min-height: 0;
+    padding: 21px 17px;
+  }
+
+  .projectNav > div,
+  .closing > div {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nextLink {
+    align-self: flex-end;
+  }
+}
