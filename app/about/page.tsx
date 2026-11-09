@@ -1,11 +1,103 @@
 import Image from "next/image";
 import type { Metadata } from "next";
-import { ArrowRight, Crosshair, Layers, Ruler } from "lucide-react";
+import { ArrowRight, Building2, ClipboardCheck, Compass, Map, Route, Waves } from "lucide-react";
 import { Button } from "../components/button";
 import { PageHero } from "../components/page-hero";
 import { StructuredData } from "../components/structured-data";
 import { jsonLd } from "../lib/seo";
+import styles from "./page.module.css";
 
-export const metadata: Metadata = { title: "About", description: "Learn about the measured, detail-led approach behind [Surveyor Name] land surveying services.", alternates: { canonical: "/about" } };
+export const metadata: Metadata = {
+  title: "About",
+  description: "Learn about our collaborative approach to land surveying, cadastral work, topographic mapping and project delivery.",
+  alternates: { canonical: "/about" },
+};
 
-export default function AboutPage() { return <main><StructuredData data={jsonLd("person")} /><PageHero eyebrow="About" title="Survey work made clearer, from first conversation to final output." intro="A professional profile is ready to be completed with verified qualifications, registration and career information." /><section className="section"><div className="shell about-grid about-page-grid"><div className="about-copy"><p className="eyebrow">The practice</p><h2>Measured work is about more than a set of coordinates.</h2><p>This is a place for the surveyor’s biography: the experience that informs their field judgement, the people they work alongside, and the kind of projects they most enjoy supporting.</p></div><div className="portrait-wrap"><Image src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85" alt="A professional working in a meeting" fill sizes="(max-width: 900px) 100vw, 45vw" /></div></div></section><section className="section dark-panel"><div className="shell"><p className="eyebrow">What guides the work</p><div className="values-grid"><div><Crosshair /><h2>Accuracy with purpose</h2><p>Method and precision are selected to serve the real decision in front of the client.</p></div><div><Layers /><h2>Useful information</h2><p>Survey outputs should be legible, relevant and ready for the people who need them.</p></div><div><Ruler /><h2>Care on site</h2><p>Thoughtful preparation and attention to the field context are central to each commission.</p></div></div></div></section><section className="section"><div className="shell two-col"><div><p className="eyebrow">Methods & equipment</p><h2>Built around the brief, not a one-size-fits-all process.</h2></div><div className="rich-copy"><p>Use this section to describe verified equipment, field methods, quality processes and professional memberships. It has been intentionally left factual-light until that information is supplied.</p><Button href="/request-a-survey" variant="text">Discuss a project <ArrowRight size={17} /></Button></div></div></section></main>; }
+const services = [
+  { title: "Road construction surveys", icon: Route },
+  { title: "Road alignment", icon: Compass },
+  { title: "Topographic surveys", icon: Map },
+  { title: "Coastline mapping", icon: Waves },
+  { title: "Building construction setting-out", icon: Building2 },
+  { title: "Cadastral plan production", icon: ClipboardCheck },
+  { title: "Detailed surveys of existing projects", icon: Map },
+];
+
+export default function AboutPage() {
+  return (
+    <main>
+      <StructuredData data={jsonLd("person")} />
+      <PageHero
+        eyebrow="About"
+        title="Surveying experience built around the needs of each project."
+        intro="We deliver surveying and spatial information for land, infrastructure and building projects, with a focus on accuracy, professional standards and dependable project delivery."
+      />
+
+      <section className={styles.profile}>
+        <div className="shell">
+          <div className={styles.profileCopy}>
+            <p className="eyebrow">Our approach</p>
+            <h2>Good project work is built through <em>collaboration.</em></h2>
+            <p>Over the years, we have worked alongside civil engineers, surveyors, town planners, architects, builders and other professionals. We coordinate survey work with the wider project team so that site information, design and construction requirements stay connected.</p>
+            <p>We bring commitment and care to every commission, prioritising professional standards and accurate project information. Our experience includes the delivery of major projects across land development, infrastructure and building work.</p>
+          </div>
+          <div className={styles.profileVisual}>
+            <Image
+              src="/images/topographic-survey-total-station.jpg"
+              alt="Survey equipment used to record site measurements"
+              fill
+              sizes="(max-width: 800px) 100vw, 45vw"
+            />
+            <span>Surveying · planning · project delivery</span>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.focus}>
+        <div className="shell">
+          <div className={styles.focusHeading}>
+            <div>
+              <p className="eyebrow">Areas of work</p>
+              <h2>Spatial work, from field<br />survey to <em>project plans.</em></h2>
+            </div>
+            <p>We enjoy projects involving spatial information, particularly cadastral surveys, layout design and building plans.</p>
+          </div>
+          <div className={styles.serviceList}>
+            {services.map(({ title, icon: Icon }, index) => (
+              <div className={styles.serviceItem} key={title}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <Icon aria-hidden="true" />
+                <h3>{title}</h3>
+                <ArrowRight aria-hidden="true" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.credentials}>
+        <div className="shell">
+          <div className={styles.credentialsHeading}>
+            <p className="eyebrow">Professional record</p>
+            <h2>Experience and registration.</h2>
+          </div>
+          <div className={styles.milestones}>
+            <div><span>2018</span><p>Qualification</p></div>
+            <div><span>2024</span><p>Project experience</p></div>
+            <div><span>2024</span><p>SURCON registration</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.contact}>
+        <div className="shell">
+          <div>
+            <p className="eyebrow">Work with us</p>
+            <h2>Have a spatial project<br /><em>to discuss?</em></h2>
+          </div>
+          <Button href="/request-a-survey" variant="text">Tell us about your project <ArrowRight size={17} /></Button>
+        </div>
+      </section>
+    </main>
+  );
+}
