@@ -68,7 +68,6 @@ export default function AboutPage() {
                 <span>{String(index + 1).padStart(2, "0")}</span>
                 <Icon aria-hidden="true" />
                 <h3>{title}</h3>
-                <ArrowRight aria-hidden="true" />
               </div>
             ))}
           </div>
