@@ -41,26 +41,7 @@ export function EnquiryForm({ compact = false }: Props) {
             <option>Not sure yet</option>
           </select>
         </label>
-        <label className="form-span">Property location<input required name="location" autoComplete="street-address" placeholder="Address, area, town or nearby landmark" /></label>
-        <label>Property size<input name="propertySize" placeholder="Approximate area or dimensions" /></label>
-        <label>Property title<input name="propertyTitle" placeholder="e.g. C of O, deed, survey plan, or unknown" /></label>
-        <label>Litigation status
-          <select name="litigationStatus" defaultValue="">
-            <option value="">Prefer not to say / not sure</option>
-            <option>No known litigation</option>
-            <option>Currently in litigation</option>
-            <option>Previously in litigation</option>
-          </select>
-        </label>
-        <label>Site accessibility
-          <select name="accessibility" defaultValue="">
-            <option value="">Select an option</option>
-            <option>Good vehicle access</option>
-            <option>Pedestrian access only</option>
-            <option>Limited or difficult access</option>
-            <option>Access needs to be arranged</option>
-          </select>
-        </label>
+        {!compact && <label className="form-span">Property or project location<input required name="location" placeholder="Area, town or site reference" /></label>}
         <label className="form-span">Tell us about the project<textarea required name="description" rows={compact ? 4 : 5} placeholder="What do you need to achieve? Include timing, available plans, documents or other useful site details." /></label>
       </div>
       <button className="button button--solid submit" type="submit" disabled={status === "sending"}>

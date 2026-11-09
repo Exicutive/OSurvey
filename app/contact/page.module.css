@@ -33,6 +33,39 @@
   text-underline-offset: 4px;
 }
 
+.preparation {
+  margin-top: 20px;
+  padding: 20px 22px;
+  border-left: 3px solid var(--orange);
+  background: #f0f4ff;
+}
+
+.preparation h3 {
+  margin: 0 0 11px;
+  color: var(--blue);
+  font-size: 15px;
+}
+
+.preparation ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px 22px;
+  margin: 0;
+  padding-left: 18px;
+  color: var(--deep);
+  font-size: 12px;
+}
+
+.preparation li::marker {
+  color: var(--magenta);
+}
+
+.preparation p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 10px;
+}
+
 @media (max-width: 800px) {
   .location {
     padding-top: 60px;
@@ -40,5 +73,11 @@
 
   .map iframe {
     height: 320px;
+  }
+}
+
+@media (max-width: 500px) {
+  .preparation ul {
+    grid-template-columns: 1fr;
   }
 }
