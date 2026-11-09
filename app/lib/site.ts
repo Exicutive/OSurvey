@@ -146,8 +146,8 @@ export const estateProjects = [
       { title: "Map surface-water patterns", description: "Used the recorded levels and terrain shape to identify surface flow patterns and provide drainage-planning information to the engineering team." },
       { title: "Issue design survey information", description: "Compiled the topographic plan and level data for use in assessing drainage routes, site grading and foundation design." },
     ],
-    image: "/images/geospatial-terrain-model.svg",
-    imageAlt: "Illustration of a mapped terrain model with contour features",
+    image: "/images/topographic-field-map.svg",
+    imageAlt: "Topographic terrain map with contours, a measured site boundary and survey control points",
     featured: true,
   },
   {

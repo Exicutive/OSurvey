@@ -10,12 +10,15 @@
 .project-section .project-card:hover{transform:translateY(-7px);box-shadow:0 24px 43px rgba(9,43,131,.15)}
 .project-section .project-image{position:relative;min-height:100%;aspect-ratio:auto;overflow:hidden;background:var(--deep)}
 .project-section .project-card--large .project-image{height:100%;min-height:577px}
-.project-section .project-card--large .project-image img{object-position:center center}
+.project-section .project-card--large .project-image img{object-position:left center}
 .project-section .project-image:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,23,75,.06) 30%,rgba(6,23,75,.78) 100%)}
 .project-section .project-card:not(.project-card--large) .project-image:after{background:linear-gradient(135deg,rgba(6,23,75,.1),rgba(6,23,75,.43))}
+.project-section .project-card:nth-child(2) .project-image img{object-fit:contain}
+.project-section .project-card:nth-child(3) .project-image img{object-fit:contain}
 .project-section .project-image img{transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .35s ease;filter:saturate(.8) contrast(1.04)}
 .project-section .project-card:hover .project-image img{transform:scale(1.07);filter:saturate(1.02) contrast(1.04)}
-.project-index{position:absolute;z-index:1;left:22px;top:20px;display:grid;place-items:center;width:39px;height:39px;border:1px solid rgba(255,255,255,.7);border-radius:50%;color:#fff;font-size:10px;font-weight:800;letter-spacing:.08em;background:rgba(6,23,75,.19);backdrop-filter:blur(5px)}
+.project-section .project-card:nth-child(2):hover .project-image img,.project-section .project-card:nth-child(3):hover .project-image img{transform:none}
+.project-index{position:absolute;z-index:1;right:22px;top:20px;display:grid;place-items:center;width:39px;height:39px;border:1px solid rgba(255,255,255,.7);border-radius:50%;color:#fff;font-size:10px;font-weight:800;letter-spacing:.08em;background:rgba(6,23,75,.19);backdrop-filter:blur(5px)}
 .project-content{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:flex-end;padding:28px 25px 26px}
 .project-card--large .project-content{position:absolute;right:0;bottom:0;left:0;color:#fff;padding:34px 33px 31px}
 .project-content>span{display:block;margin-bottom:9px;color:var(--magenta);font-size:9px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}
@@ -30,4 +33,4 @@
 .project-footer p{margin:0;color:var(--muted);font-size:11px}.project-footer p span{display:inline-block;width:26px;height:2px;margin:0 8px 3px 0;background:var(--orange);vertical-align:middle}
 .project-footer .button{margin:0;flex:none}
 @media(max-width:800px){.project-heading{display:block;margin-bottom:34px}.project-heading>p{margin-top:21px}.project-section .project-grid{grid-template-columns:1fr;grid-template-rows:auto}.project-section .project-card,.project-section .project-card--large{grid-row:auto;display:block;min-height:0}.project-section .project-card--large .project-image{height:auto;min-height:420px}.project-section .project-card:not(.project-card--large){display:grid;grid-template-columns:.9fr 1.1fr}.project-section .project-card:not(.project-card--large) .project-image{min-height:270px}.project-footer{align-items:flex-start;flex-direction:column;gap:17px}}
-@media(max-width:500px){.project-section .project-card:not(.project-card--large){display:block}.project-section .project-card--large .project-image{min-height:390px}.project-section .project-card:not(.project-card--large) .project-image{min-height:235px}.project-content{padding:23px 20px}.project-card--large .project-content{padding:25px 21px}.project-card--large .project-content h3{font-size:2rem}.project-index{left:16px;top:16px;width:35px;height:35px}.project-footer .button{width:100%}}
+@media(max-width:500px){.project-section .project-card:not(.project-card--large){display:block}.project-section .project-card--large .project-image{min-height:390px}.project-section .project-card:not(.project-card--large) .project-image{min-height:235px}.project-content{padding:23px 20px}.project-card--large .project-content{padding:25px 21px}.project-card--large .project-content h3{font-size:2rem}.project-index{right:16px;top:16px;width:35px;height:35px}.project-footer .button{width:100%}}
