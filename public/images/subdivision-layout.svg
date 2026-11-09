@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Subdivision and land layout</title>
+  <desc id="desc">A measured subdivision plan showing individual land parcels, access routes and survey control points.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8fbff"/><stop offset="1" stop-color="#dce8ff"/></linearGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#123fb5" stroke-opacity=".1"/></pattern>
+  </defs>
+  <rect width="1200" height="800" fill="url(#paper)"/><rect width="1200" height="800" fill="url(#grid)"/>
+  <path d="m238 168 704 26-46 438-690-31Z" fill="#123fb5" fill-opacity=".08" stroke="#123fb5" stroke-width="7"/>
+  <path d="m320 171-9 438m103-434-6 439m104-435-2 440m104-436 2 441m104-437 6 442m104-438 10 443M221 269l704 26m-714 72 704 26m-714 71 704 26m-714 71 704 26" fill="none" stroke="#123fb5" stroke-width="3"/>
+  <path d="m520 179 36 445m102-441 38 448" fill="none" stroke="#f1652f" stroke-width="7" stroke-dasharray="14 12"/>
+  <g fill="#092b83" font-family="Arial, sans-serif" font-size="16" font-weight="700">
+    <text x="255" y="246">PLOT 01</text><text x="362" y="246">PLOT 02</text><text x="465" y="246">PLOT 03</text><text x="569" y="246">PLOT 04</text><text x="672" y="246">PLOT 05</text><text x="776" y="246">PLOT 06</text>
+    <text x="77" y="92" font-size="25" letter-spacing="5">SUBDIVISION &amp; LAYOUT</text><text x="79" y="128" font-size="13" fill="#4d5a7a" letter-spacing="3">PARCELS · ACCESS · CONTROL</text>
+  </g>
+  <g fill="#f1652f" stroke="#fff" stroke-width="4"><circle cx="238" cy="168" r="13"/><circle cx="942" cy="194" r="13"/><circle cx="896" cy="632" r="13"/><circle cx="206" cy="601" r="13"/></g>
+  <path d="m1000 560 0-122m0 0-17 28m17-28 17 28" fill="none" stroke="#092b83" stroke-width="5"/><text x="991" y="590" fill="#092b83" font-family="Arial, sans-serif" font-size="17" font-weight="700">N</text>
+</svg>

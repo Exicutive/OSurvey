@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Hydrographic survey</title>
+  <desc id="desc">A survey vessel maps underwater contours with sonar and geospatial control points.</desc>
+  <defs>
+    <linearGradient id="water" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b318d"/><stop offset="1" stop-color="#061746"/></linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#a9c9ff" stroke-opacity=".12"/></pattern>
+    <linearGradient id="depth" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#1b55d4" stop-opacity=".25"/><stop offset="1" stop-color="#061746" stop-opacity=".95"/></linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#water)"/><rect width="1200" height="800" fill="url(#grid)"/>
+  <path d="M0 515C130 486 204 548 333 514s207-78 332-24 227 77 351 34 136-46 184-32v308H0Z" fill="url(#depth)"/>
+  <g fill="none" stroke="#72a2ff" stroke-width="3" opacity=".8">
+    <path d="M-40 584c164-75 248 79 407 12s209-92 348-19 218 77 347 4 168-40 194-26"/>
+    <path d="M-35 634c161-73 247 78 405 12s209-91 348-19 219 76 348 4 168-39 193-25"/>
+    <path d="M-30 684c159-71 246 77 403 12s210-90 348-19 220 75 349 4 168-38 192-24"/>
+    <path d="M-24 734c157-70 244 76 401 12s210-89 348-19 221 74 350 4 168-37 190-23"/>
+  </g>
+  <path d="M429 274h244l-42 62H471Z" fill="#ffad85" stroke="#fff" stroke-width="4"/>
+  <path d="M522 272v-88h70v88" fill="#fff" fill-opacity=".92"/><path d="M557 182v-43" stroke="#ff7644" stroke-width="5"/>
+  <path d="M552 336 422 523m130-187L493 544m59-208 0 218m0-218 66 208m-66-208 129 187" stroke="#ff7644" stroke-width="3" stroke-dasharray="9 10" opacity=".9"/>
+  <circle cx="552" cy="507" r="13" fill="#ff7644"/><circle cx="552" cy="507" r="31" fill="none" stroke="#ffad85" stroke-width="3"/>
+  <g fill="#a9c9ff" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="3">
+    <text x="78" y="92">HYDROGRAPHIC SURVEY</text><text x="79" y="126" font-size="12">SONAR · DEPTH · WATERWAY MAPPING</text>
+    <text x="867" y="542" font-size="12">SOUNDING LINE</text><text x="868" y="702" font-size="12">UNDERWATER CONTOURS</text>
+  </g>
+</svg>

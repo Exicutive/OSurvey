@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { Binoculars, Compass, Map, Ruler, ScanLine, Waypoints } from "lucide-react";
+import { Binoculars, Compass, Map, Ruler, ScanLine, Waypoints, Waves } from "lucide-react";
 
 const icons: Record<string, LucideIcon> = {
   "land-cadastral-surveys": Map,
@@ -8,6 +8,7 @@ const icons: Record<string, LucideIcon> = {
   "construction-setting-out": Ruler,
   "subdivision-layout": Waypoints,
   "gis-digital-mapping": Binoculars,
+  "hydrographic-survey": Waves,
 };
 
 export function ServiceIcon({ slug }: { slug: string }) {

@@ -29,6 +29,7 @@ export type Service = {
   overview: string;
   for: string;
   benefit: string;
+  image: string;
 };
 
 export const services: Service[] = [
@@ -39,6 +40,7 @@ export const services: Service[] = [
     overview: "Establish and document land interests with careful field observations and clear survey outputs.",
     for: "Property owners, buyers, legal professionals and developers.",
     benefit: "A reliable basis for land decisions, documentation and project planning.",
+    image: "/images/topographic-field-map.svg",
   },
   {
     slug: "boundary-beacon-identification",
@@ -47,6 +49,7 @@ export const services: Service[] = [
     overview: "A practical site-based review of existing boundary evidence, marks and survey information.",
     for: "Owners, neighbours and buyers who need boundary clarity.",
     benefit: "Helps inform discussions and next steps with a measured understanding of the site.",
+    image: "/images/topographic-survey-total-station.jpg",
   },
   {
     slug: "topographic-surveys",
@@ -55,6 +58,7 @@ export const services: Service[] = [
     overview: "Capture levels, visible features and site conditions in a format suited to design and planning teams.",
     for: "Architects, engineers, planners and property developers.",
     benefit: "Gives project teams a dependable spatial picture before design decisions are made.",
+    image: "/images/geospatial-terrain-model.svg",
   },
   {
     slug: "construction-setting-out",
@@ -63,6 +67,7 @@ export const services: Service[] = [
     overview: "Support construction with measured control, set-out points and checks against agreed drawings.",
     for: "Contractors, engineers, architects and project managers.",
     benefit: "Supports orderly construction coordination and reduces avoidable dimensional uncertainty.",
+    image: "/images/field-surveyor-total-station.jpg",
   },
   {
     slug: "subdivision-layout",
@@ -71,6 +76,7 @@ export const services: Service[] = [
     overview: "Develop practical survey information for proposed layouts and subdivision workflows.",
     for: "Landowners, developers and planning teams.",
     benefit: "A clear survey foundation for evaluating land use and proposed plot arrangements.",
+    image: "/images/subdivision-layout.svg",
   },
   {
     slug: "gis-digital-mapping",
@@ -79,6 +85,16 @@ export const services: Service[] = [
     overview: "Structure location data and mapping outputs for land, infrastructure and asset-focused projects.",
     for: "Organisations that need accessible spatial information.",
     benefit: "Makes location-based information easier to share, understand and use.",
+    image: "/images/gis-digital-mapping.svg",
+  },
+  {
+    slug: "hydrographic-survey",
+    title: "Hydrographic survey",
+    short: "Measured underwater data for waterways and coastal projects.",
+    overview: "Capture and map underwater levels and features to support planning, design and assessment of aquatic environments.",
+    for: "Marine, coastal, infrastructure and waterway project teams.",
+    benefit: "Provides spatial information to help understand underwater conditions and inform project decisions.",
+    image: "/images/hydrographic-survey.svg",
   },
 ];
 
