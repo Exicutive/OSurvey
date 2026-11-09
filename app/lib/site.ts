@@ -98,10 +98,78 @@ export const services: Service[] = [
   },
 ];
 
-export const projectPlaceholders = [
-  { category: "Topographic survey", title: "Site context & terrain mapping", description: "Measured terrain and visible features, structured for confident design decisions.", image: "/images/topographic-field-map.svg" },
-  { category: "Land information", title: "Spatial data for land decisions", description: "Clear location intelligence for property, planning and development teams.", image: "/images/geospatial-terrain-model.svg" },
-  { category: "Field control", title: "Precision on active sites", description: "Survey control that helps plans translate accurately on the ground.", image: "/images/field-surveyor-total-station.jpg" },
+export const estateProjects = [
+  {
+    slug: "marbella-luxury-smart-estate",
+    name: "Marbella Luxury Smart Estate",
+    location: "Ibeju-Lekki, Lagos",
+    description: "A premium residential and commercial estate in Landmark Corporate Realty’s Lagos portfolio.",
+    image: "/images/subdivision-layout.svg",
+    imageAlt: "Illustration of surveyed estate parcels and access routes",
+    featured: true,
+  },
+  {
+    slug: "queens-garden-annex",
+    name: "Queen’s Garden Annex",
+    location: "Isheri-North GRA, Lagos",
+    description: "An estate development in the Landmark Corporate Realty portfolio in Isheri-North.",
+    image: "/images/topographic-field-map.svg",
+    imageAlt: "Illustration of a surveyed site boundary and topographic contours",
+    featured: true,
+  },
+  {
+    slug: "lake-view-park-and-resort",
+    name: "Lake View Park and Resort",
+    location: "Ketu-Epe, Lagos",
+    description: "A park and resort development in the Landmark Corporate Realty portfolio.",
+    image: "/images/geospatial-terrain-model.svg",
+    imageAlt: "Illustration of a mapped terrain model with contour features",
+    featured: true,
+  },
+  {
+    slug: "city-view-park-and-resort-queens-park",
+    name: "City View Park & Resort / Queen’s Park",
+    location: "Abuja axis",
+    description: "Park and resort projects included in the Landmark Corporate Realty portfolio across the Abuja axis.",
+    image: "/images/gis-digital-mapping.svg",
+    imageAlt: "Illustration of digital mapping layers and surveyed control points",
+    featured: false,
+  },
+] as const;
+
+export const featuredProjects = estateProjects.filter((project) => project.featured);
+
+export const projectDeliverables = [
+  {
+    number: "01",
+    title: "Master plan parcellation",
+    description: "Translated raw master plan concepts into precise residential and commercial plot layouts, including standardized 300 sqm and 500 sqm allocations.",
+  },
+  {
+    number: "02",
+    title: "Boundary verification",
+    description: "Carried out perimeter and cadastral surveys to establish estate limits, verify boundaries and support title integrity.",
+  },
+  {
+    number: "03",
+    title: "Topographical & contour mapping",
+    description: "Mapped terrain, elevations and water-flow patterns to inform drainage routes, foundation design and engineering decisions.",
+  },
+  {
+    number: "04",
+    title: "Beaconing & physical allocation",
+    description: "Coordinated the fabrication, placement and unique numbering of concrete boundary pillars for plot identification and allocation.",
+  },
+  {
+    number: "05",
+    title: "Statutory survey documentation",
+    description: "Prepared and certified stamped survey plans with geodetic data to support processing of Governor’s Consents and Certificates of Occupancy.",
+  },
+  {
+    number: "06",
+    title: "As-built infrastructure audits",
+    description: "Checked road and drainage alignments during construction against approved estate layouts.",
+  },
 ] as const;
 
 export function absoluteUrl(path = "/") {

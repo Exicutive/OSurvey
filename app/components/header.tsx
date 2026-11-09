@@ -21,7 +21,7 @@ export function Header() {
       </button>
       <nav id="primary-nav" className={open ? "nav-links is-open" : "nav-links"} aria-label="Primary navigation">
         {navItems.map((item) => <Link key={item.href} href={item.href} onClick={() => setOpen(false)} className={pathname === item.href ? "active" : ""}>{item.label}</Link>)}
-        <Link className="nav-cta" href="/request-a-survey" onClick={() => setOpen(false)}>Request a Survey</Link>
+        <Link className="nav-cta" href="/request-a-survey" onClick={() => setOpen(false)}>Request a Plan</Link>
       </nav>
     </div>
   </header>;
