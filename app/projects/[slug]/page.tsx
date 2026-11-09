@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { ArrowLeft, ArrowRight, MapPin, MoveUpRight } from "lucide-react";
 import { notFound } from "next/navigation";
 import { Button } from "../../components/button";
-import { estateProjects, projectDeliverables } from "../../lib/site";
+import { estateProjects } from "../../lib/site";
 import styles from "./page.module.css";
 
 type ProjectPageProps = {
@@ -67,15 +67,15 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
       <section className={styles.overview}>
         <div className="shell">
           <div className={styles.overviewTitle}>
-            <p className="eyebrow">Project overview</p>
-            <h2>Measured from<br /><em>plan to place.</em></h2>
+            <p className="eyebrow">Survey work completed</p>
+            <h2>Survey work<br /><em>completed.</em></h2>
           </div>
           <div className={styles.overviewCopy}>
-            <p>{project.description} Surveying and land documentation helped translate development plans into clearly defined plots, verified site boundaries and practical information for engineering and statutory processes.</p>
+            <p>{project.surveySummary}</p>
             <div className={styles.projectFacts}>
-              <div><span>Project type</span><strong>Estate development</strong></div>
+              <div><span>Site</span><strong>Estate development</strong></div>
               <div><span>Location</span><strong>{project.location}</strong></div>
-              <div><span>Survey focus</span><strong>Planning · boundaries · delivery</strong></div>
+              <div><span>Work areas</span><strong>{project.workAreas}</strong></div>
             </div>
           </div>
         </div>
@@ -85,15 +85,14 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         <div className="shell">
           <div className={styles.scopeHeading}>
             <div>
-              <p className="eyebrow">Survey scope</p>
-              <h2>Coordinated work.<br /><em>Clear information.</em></h2>
+              <p className="eyebrow">Work completed</p>
+              <h2>Survey work,<br /><em>step by step.</em></h2>
             </div>
-            <p>The estate portfolio combined cadastral, engineering and topographical survey work at key stages of land planning and development.</p>
           </div>
           <div className={styles.scopeGrid}>
-            {projectDeliverables.map((item) => (
-              <article className={styles.scopeItem} key={item.number}>
-                <span>{item.number}</span>
+            {project.workDone.map((item, index) => (
+              <article className={styles.scopeItem} key={item.title}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
                 <div>
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
