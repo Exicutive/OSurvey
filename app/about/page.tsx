@@ -29,7 +29,7 @@ export default function AboutPage() {
       <StructuredData data={jsonLd("person")} />
       <PageHero
         eyebrow="About"
-        title="Surveying experience built around the needs of each project."
+        title="Surveying and planning experience built around the needs of each project."
         intro="We deliver surveying and spatial information for land, infrastructure and building projects, with a focus on accuracy, professional standards and dependable project delivery."
       />
 
@@ -43,8 +43,8 @@ export default function AboutPage() {
           </div>
           <div className={styles.profileVisual}>
             <Image
-              src="/images/topographic-survey-total-station.jpg"
-              alt="Survey equipment used to record site measurements"
+              src="/images/about-profile.jpg"
+              alt="Surveying professional in the field"
               fill
               sizes="(max-width: 800px) 100vw, 45vw"
             />
