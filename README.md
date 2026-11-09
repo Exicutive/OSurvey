@@ -37,13 +37,13 @@ All owner-editable business and SEO placeholders live in [`app/lib/site.ts`](./a
 - canonical public site URL via `NEXT_PUBLIC_SITE_URL` in `render.yaml`;
 - professional biography, verified credentials, registrations, equipment and service offer;
 - portfolio imagery and approved project descriptions;
-- social links and any legal/privacy details.
+- social links and any applicable legal notices.
 
 ## Enquiries
 
 The enquiry UI validates required data and posts to `app/api/enquiries/route.ts`. It intentionally returns a clear error until a secure email or CRM integration is implemented. This prevents the site from falsely claiming a visitor’s enquiry was delivered.
 
-When connecting a provider, add server-only credentials to `.env.local`, implement the delivery call in that route, add rate limiting/spam protection as appropriate, and revise the privacy policy to reflect the final processing arrangements.
+When connecting a provider, add server-only credentials to `.env.local`, implement the delivery call in that route, add rate limiting/spam protection as appropriate, and ensure visitor notices reflect the final data-processing arrangements.
 
 ## Images
 

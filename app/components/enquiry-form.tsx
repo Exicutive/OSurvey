@@ -48,7 +48,7 @@ export function EnquiryForm({ compact = false }: Props) {
         {status === "sending" ? <><LoaderCircle className="spin" size={17} /> Sending…</> : <>Send enquiry <Send size={16} /></>}
       </button>
       {message && <p className={status === "sent" ? "form-message success" : "form-message error"} role="status">{message}</p>}
-      <p className="form-privacy">By submitting, you agree to be contacted about this enquiry. See our <a href="/privacy">privacy policy</a>.</p>
+      <p className="form-privacy">By submitting, you agree to be contacted about this enquiry.</p>
     </form>
   );
 }

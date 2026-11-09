@@ -6,17 +6,16 @@ type PageMetadata = {
   description: string;
   path: string;
   image?: string;
-  noIndex?: boolean;
 };
 
-export function pageMetadata({ title, description, path, image = "/images/field-surveyor-total-station.jpg", noIndex = false }: PageMetadata): Metadata {
+export function pageMetadata({ title, description, path, image = "/images/field-surveyor-total-station.jpg" }: PageMetadata): Metadata {
   const imageUrl = absoluteUrl(image);
 
   return {
     title,
     description,
     alternates: { canonical: path },
-    robots: noIndex ? { index: false, follow: true } : { index: true, follow: true },
+    robots: { index: true, follow: true },
     openGraph: {
       type: "website",
       locale: "en_NG",
