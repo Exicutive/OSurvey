@@ -6,7 +6,7 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.lutexspatial.com",
   phone: "+234 707 621 2073",
   phoneHref: "+2347076212073",
-  email: "[Email address]",
+  email: "info@lutexspatial.com",
   whatsapp: "2348138582155",
   whatsappDisplay: "+234 813 858 2155",
   serviceArea: "No. 2, Akabogu Street, Lagos Business School, Ajah, Lagos",
