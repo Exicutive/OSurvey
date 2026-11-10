@@ -13,8 +13,7 @@
 .project-section .project-card--large .project-image img{object-position:left center}
 .project-section .project-image:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,23,75,.06) 30%,rgba(6,23,75,.78) 100%)}
 .project-section .project-card:not(.project-card--large) .project-image:after{background:linear-gradient(135deg,rgba(6,23,75,.1),rgba(6,23,75,.43))}
-.project-section .project-card:nth-child(2) .project-image img{object-fit:contain}
-.project-section .project-card:nth-child(3) .project-image img{object-fit:contain}
+.project-section .project-card:nth-child(2) .project-image img,.project-section .project-card:nth-child(3) .project-image img{object-fit:cover}
 .project-section .project-image img{transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .35s ease;filter:saturate(.8) contrast(1.04)}
 .project-section .project-card:hover .project-image img{transform:scale(1.07);filter:saturate(1.02) contrast(1.04)}
 .project-section .project-card:nth-child(2):hover .project-image img,.project-section .project-card:nth-child(3):hover .project-image img{transform:none}
