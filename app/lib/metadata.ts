@@ -6,10 +6,18 @@ type PageMetadata = {
   description: string;
   path: string;
   image?: string;
+  imageAlt?: string;
 };
 
-export function pageMetadata({ title, description, path, image = "/images/field-surveyor-total-station.jpg" }: PageMetadata): Metadata {
+export function pageMetadata({
+  title,
+  description,
+  path,
+  image = "/images/field-surveyor-total-station.jpg",
+  imageAlt = "Land surveyor carrying out field measurements",
+}: PageMetadata): Metadata {
   const imageUrl = absoluteUrl(image);
+  const socialImage = { url: imageUrl, alt: imageAlt };
 
   return {
     title,
@@ -23,13 +31,13 @@ export function pageMetadata({ title, description, path, image = "/images/field-
       title,
       description,
       url: absoluteUrl(path),
-      images: [{ url: imageUrl, alt: `${site.shortName} land surveying and geospatial services` }],
+      images: [socialImage],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [imageUrl],
+      images: [socialImage],
     },
   };
 }

@@ -28,9 +28,11 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
 
   return {
     ...pageMetadata({
-      title: `${project.name} Surveying Project`,
-      description: `${project.surveySummary} Estate survey project in ${project.location}.`,
+      title: project.name,
+      description: `${project.surveySummary} ${project.location}.`,
       path: `/projects/${project.slug}`,
+      image: project.image,
+      imageAlt: project.imageAlt,
     }),
   };
 }

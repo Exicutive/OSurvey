@@ -9,10 +9,11 @@ import { jsonLd } from "../lib/seo";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = pageMetadata({
-  title: "About Our Surveying Practice",
-  description: "Meet Lutex Survey & Planning Services: collaborative land surveying and geospatial work in Lagos, from cadastral plans to topographic mapping and construction setting-out.",
+  title: "Land Surveying Practice in Lagos",
+  description: "Learn about Lutex Survey & Planning Services, a Lagos practice delivering cadastral, topographic, road alignment, coastline mapping and construction surveys.",
   path: "/about",
   image: "/images/about-profile.jpg",
+  imageAlt: "Surveying professional in the field",
 });
 
 const services = [

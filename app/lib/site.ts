@@ -2,7 +2,7 @@ export const site = {
   name: "Lutex Survey & Planning Services",
   shortName: "Lutex",
   description:
-    "Land surveying, geospatial mapping and practical surveying training in Lagos, Nigeria, including cadastral, boundary, topographic, hydrographic and construction services.",
+    "Land surveying and geospatial services in Lagos, Nigeria, including cadastral, boundary, topographic, hydrographic, construction setting-out, GIS and practical surveying training.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.lutexspatial.com",
   phone: "+234 707 621 2073",
   phoneHref: "+2347076212073",
@@ -151,8 +151,8 @@ export const estateProjects = [
     featured: true,
   },
   {
-    slug: "cityview-park-and-resort-queens-park",
-    name: "Cityview Park & Resort / Queen’s Park",
+    slug: "cityview-park-and-resort-queens-park-estate-karshi",
+    name: "Cityview Park & Resort / Queen's Park Estate Karshi",
     location: "Abuja axis",
     description: "Park and resort developments in the Abuja area.",
     surveySummary: "Surveyed and documented land layout information to support planning and physical plot identification across the park and resort developments.",

@@ -8,21 +8,21 @@ import { site } from "./lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: "Land Surveying, Geospatial & Training Services in Lagos", template: `%s | ${site.shortName}` },
+  title: { default: "Land Surveyor & Geospatial Services in Lagos", template: `%s | ${site.shortName}` },
   description: site.description,
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_NG",
     siteName: site.name,
-    title: "Land Surveying, Geospatial & Training Services in Lagos",
+    title: "Land Surveyor & Geospatial Services in Lagos",
     description: site.description,
     url: site.url,
     images: [{ url: "/images/field-surveyor-total-station.jpg", alt: "Land surveyor carrying out field measurements" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Land Surveying, Geospatial & Training Services in Lagos",
+    title: "Land Surveyor & Geospatial Services in Lagos",
     description: site.description,
     images: ["/images/field-surveyor-total-station.jpg"],
   },

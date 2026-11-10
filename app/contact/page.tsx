@@ -8,7 +8,7 @@ import styles from "./page.module.css";
 
 export const metadata: Metadata = pageMetadata({
   title: "Contact a Land Surveyor in Lagos",
-  description: "Contact Lutex Survey & Planning Services about cadastral, boundary, topographic, construction or geospatial surveying in Lagos, Nigeria.",
+  description: "Contact Lutex Survey & Planning Services in Lagos to discuss land, boundary, topographic, construction or geospatial surveying and training.",
   path: "/contact",
 });
 

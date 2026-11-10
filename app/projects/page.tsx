@@ -9,8 +9,8 @@ import { estateProjects, projectDeliverables } from "../lib/site";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Land Surveying Projects in Lagos & Abuja",
-  description: "Explore estate surveying projects covering master plan parcellation, cadastral and boundary surveys, topographic mapping, beaconing and survey documentation.",
+  title: "Estate Surveying Projects in Lagos & Abuja",
+  description: "View estate surveying projects in Lagos and Abuja, including cadastral and boundary verification, master plan parcellation, topographic mapping and beaconing.",
   path: "/projects",
 });
 

@@ -10,8 +10,8 @@ import { services } from "../lib/site";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Surveying, Geospatial & Training Services in Lagos",
-  description: "Explore cadastral and boundary surveys, topographic mapping, construction setting-out, subdivision, GIS, hydrographic surveying and training in Lagos, Nigeria.",
+  title: "Land Surveying & Training in Lagos",
+  description: "Land surveying and geospatial services in Lagos, Nigeria, including cadastral, boundary, topographic, hydrographic, construction setting-out, GIS and training.",
   path: "/services",
 });
 export default function ServicesPage() {
