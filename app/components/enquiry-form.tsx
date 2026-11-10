@@ -2,12 +2,12 @@
 
 import { useState, type FormEvent } from "react";
 import { LoaderCircle, Send } from "lucide-react";
-import { services } from "../lib/site";
+import { services, trainingServiceLabel } from "../lib/site";
 
 type FormState = "idle" | "sending" | "sent" | "error";
-type Props = { compact?: boolean; formType: "contact" | "request-a-plan" };
+type Props = { compact?: boolean; formType: "contact" | "request-a-plan"; selectedService?: string };
 
-export function EnquiryForm({ compact = false, formType }: Props) {
+export function EnquiryForm({ compact = false, formType, selectedService = "" }: Props) {
   const [status, setStatus] = useState<FormState>("idle");
   const [message, setMessage] = useState("");
   async function submit(event: FormEvent<HTMLFormElement>) {
@@ -35,9 +35,10 @@ export function EnquiryForm({ compact = false, formType }: Props) {
           </label>
         )}
         <label className={compact ? "" : "form-span"}>Service needed
-          <select name="service" required defaultValue="">
+          <select name="service" required defaultValue={selectedService}>
             <option value="" disabled>Select a service</option>
             {services.map((service) => <option key={service.slug}>{service.title}</option>)}
+            <option>{trainingServiceLabel}</option>
             <option>Not sure yet</option>
           </select>
         </label>

@@ -3,7 +3,7 @@ import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { EnquiryForm } from "../components/enquiry-form";
 import { PageHero } from "../components/page-hero";
 import { pageMetadata } from "../lib/metadata";
-import { site } from "../lib/site";
+import { site, trainingServiceLabel } from "../lib/site";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = pageMetadata({
@@ -16,7 +16,14 @@ const mapQuery = "Lagos Business School, Lekki, Lagos";
 const mapEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(mapQuery)}&z=15&output=embed`;
 const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}`;
 
-export default function ContactPage() {
+type ContactPageProps = {
+  searchParams: Promise<{ service?: string }>;
+};
+
+export default async function ContactPage({ searchParams }: ContactPageProps) {
+  const { service } = await searchParams;
+  const selectedService = service === "training" ? trainingServiceLabel : undefined;
+
   const contacts = [
     { icon: Phone, title: "Phone", value: site.phone, href: `tel:${site.phoneHref}` },
     { icon: Mail, title: "Email", value: site.email, href: site.email.includes("@") ? `mailto:${site.email}` : undefined },
@@ -48,7 +55,7 @@ export default function ContactPage() {
             {contacts.filter(({ title }) => title !== "Email" || site.email.includes("@")).map(({ icon: Icon, title, value, href }) => (
               <div className="contact-item" key={title}>
                 <Icon aria-hidden="true" />
-                <div>
+                <div id="contact-enquiry">
                   <h2>{title}</h2>
                   {href ? <a href={href}>{value}</a> : <p>{value}</p>}
                 </div>
@@ -69,7 +76,7 @@ export default function ContactPage() {
               </ul>
               <p>This is a guide only. These details are not collected in the enquiry form.</p>
             </aside>
-            <EnquiryForm compact formType="contact" />
+            <EnquiryForm compact formType="contact" selectedService={selectedService} />
           </div>
         </div>
       </section>

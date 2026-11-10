@@ -98,6 +98,8 @@ export const services: Service[] = [
   },
 ];
 
+export const trainingServiceLabel = "Surveying and geospatial training";
+
 export const estateProjects = [
   {
     slug: "marbella-luxury-smart-estate",

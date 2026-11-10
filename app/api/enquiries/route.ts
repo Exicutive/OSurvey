@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { services, trainingServiceLabel } from "../../lib/site";
 
 export const runtime = "nodejs";
 
@@ -48,6 +49,11 @@ export async function POST(request: Request) {
 
   if (!["contact", "request-a-plan"].includes(formType)) {
     return NextResponse.json({ message: "Invalid enquiry form." }, { status: 400 });
+  }
+
+  const validServices = [...services.map((service) => service.title), trainingServiceLabel, "Not sure yet"];
+  if (!validServices.includes(enquiry.service)) {
+    return NextResponse.json({ message: "Please select a valid service." }, { status: 400 });
   }
 
   if (!enquiry.name || !enquiry.phone || !enquiry.email || !enquiry.service || !enquiry.description || (formType === "request-a-plan" && !enquiry.location)) {
