@@ -69,7 +69,7 @@ export default function ContactPage() {
               </ul>
               <p>This is a guide only. These details are not collected in the enquiry form.</p>
             </aside>
-            <EnquiryForm compact />
+            <EnquiryForm compact formType="contact" />
           </div>
         </div>
       </section>

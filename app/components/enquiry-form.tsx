@@ -5,15 +5,15 @@ import { LoaderCircle, Send } from "lucide-react";
 import { services } from "../lib/site";
 
 type FormState = "idle" | "sending" | "sent" | "error";
-type Props = { compact?: boolean };
+type Props = { compact?: boolean; formType: "contact" | "request-a-plan" };
 
-export function EnquiryForm({ compact = false }: Props) {
+export function EnquiryForm({ compact = false, formType }: Props) {
   const [status, setStatus] = useState<FormState>("idle");
   const [message, setMessage] = useState("");
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault(); setStatus("sending"); setMessage("");
     const form = event.currentTarget;
-    try { const res = await fetch("/api/enquiries", { method: "POST", body: new FormData(form) }); const data = await res.json(); if (!res.ok) throw new Error(data.message || "Unable to send your enquiry."); setStatus("sent"); setMessage("Thank you — your enquiry was sent successfully."); form.reset(); }
+    try { const formData = new FormData(form); formData.set("formType", formType); const res = await fetch("/api/enquiries", { method: "POST", body: formData }); const data = await res.json(); if (!res.ok) throw new Error(data.message || "Unable to send your enquiry."); setStatus("sent"); setMessage("Thank you — your enquiry was sent successfully."); form.reset(); }
     catch (error) { setStatus("error"); setMessage(error instanceof Error ? error.message : "Unable to send your enquiry."); }
   }
   return (

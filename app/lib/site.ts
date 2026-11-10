@@ -112,8 +112,8 @@ export const estateProjects = [
       { title: "Check infrastructure construction", description: "Surveyed constructed road and drainage alignments and compared their positions with the approved layout. The as-built information was recorded for review against the design." },
       { title: "Prepare survey records", description: "Compiled the measured plot and boundary information into survey documentation with geodetic data, then prepared the plans for certification and statutory land processing." },
     ],
-    image: "/images/subdivision-layout.svg",
-    imageAlt: "Illustration of surveyed estate parcels and access routes",
+    image: "/images/marbella-luxury-smart-estate.jpg",
+    imageAlt: "Entrance to Marbella Luxury Smart Estate in Ibeju-Lekki, Lagos",
     featured: true,
   },
   {

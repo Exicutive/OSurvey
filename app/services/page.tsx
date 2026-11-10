@@ -57,7 +57,7 @@ export default function ServicesPage() {
           <div className={styles.trainingCopy}>
             <p className={styles.trainingEyebrow}>A distinct OSurvey service</p>
             <h2 id="training-title">Training in surveying &amp; spatial work.</h2>
-            <p>OSurvey also offers training. Get in touch to discuss your learning goals, intended participants and the subject areas you want to cover. We can confirm a suitable scope and format with you.</p>
+            <p>We also provide training. Get in touch to discuss your learning goals, intended participants and the subject areas you want to cover. We can confirm a suitable scope and format with you.</p>
             <Button href="/contact">Enquire about training <ArrowRight size={17} /></Button>
           </div>
           <span className={styles.trainingNumber} aria-hidden="true">T</span>

@@ -15,3 +15,7 @@ services:
       # Canonical domain used in metadata, structured data and sitemap.
       - key: NEXT_PUBLIC_SITE_URL
         value: https://www.lutexspatial.com
+      - key: GOOGLE_SHEETS_WEB_APP_URL
+        sync: false
+      - key: GOOGLE_SHEETS_WEB_APP_TOKEN
+        sync: false
