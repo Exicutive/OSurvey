@@ -83,8 +83,8 @@ export default function AboutPage() {
             <h2>Experience and registration.</h2>
           </div>
           <div className={styles.milestones}>
-            <div><span>2018</span><p>Qualification</p></div>
-            <div><span>2024</span><p>Project experience</p></div>
+            <div><span>2018</span><p>Project experience</p></div>
+            <div><span>2023</span><p>TOPREC registration</p></div>
             <div><span>2024</span><p>SURCON registration</p></div>
           </div>
         </div>

@@ -2,7 +2,7 @@ export const site = {
   name: "Lutex Survey & Planning Services",
   shortName: "Lutex",
   description:
-    "Land surveying and geospatial services in Lagos, Nigeria, including cadastral, boundary, topographic, construction setting-out and GIS surveys.",
+    "Land surveying, geospatial mapping and practical surveying training in Lagos, Nigeria, including cadastral, boundary, topographic, hydrographic and construction services.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.lutexspatial.com",
   phone: "+234 707 621 2073",
   phoneHref: "+2347076212073",

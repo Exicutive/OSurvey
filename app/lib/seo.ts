@@ -25,11 +25,21 @@ export function jsonLd(type: "website" | "business" | "service", extra: Record<s
       },
       hasOfferCatalog: {
         "@type": "OfferCatalog",
-        name: "Land surveying and geospatial services",
-        itemListElement: services.map((service) => ({
-          "@type": "Offer",
-          itemOffered: { "@type": "Service", name: service.title, description: service.overview },
-        })),
+        name: "Surveying, geospatial and training services",
+        itemListElement: [
+          ...services.map((service) => ({
+            "@type": "Offer",
+            itemOffered: { "@type": "Service", name: service.title, description: service.overview },
+          })),
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Surveying and geospatial training",
+              description: "Training in surveying and spatial work, with scope and format discussed to suit the learners' goals.",
+            },
+          },
+        ],
       },
       address: {
         "@type": "PostalAddress",

@@ -1,0 +1,110 @@
+.trainingSection {
+  padding: 24px 0 112px;
+  background: #fbfcff;
+}
+
+.trainingPanel {
+  position: relative;
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
+  gap: 30px;
+  align-items: start;
+  overflow: hidden;
+  padding: clamp(32px, 6vw, 72px);
+  background: linear-gradient(120deg, #06174b, #123fb5);
+  color: #fff;
+}
+
+.trainingPanel::after {
+  position: absolute;
+  right: -100px;
+  bottom: -180px;
+  width: 400px;
+  height: 400px;
+  border: 1px solid rgba(169, 201, 255, .28);
+  border-radius: 50%;
+  box-shadow: 0 0 0 32px rgba(169, 201, 255, .06), 0 0 0 64px rgba(169, 201, 255, .04);
+  content: "";
+  pointer-events: none;
+}
+
+.trainingMark {
+  display: grid;
+  width: 72px;
+  height: 72px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, .35);
+  color: #ffad85;
+}
+
+.trainingMark svg {
+  width: 34px;
+  height: 34px;
+  stroke-width: 1.5;
+}
+
+.trainingCopy {
+  position: relative;
+  z-index: 1;
+  max-width: 690px;
+}
+
+.trainingEyebrow {
+  margin-bottom: 14px;
+  color: #ffad85;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.trainingCopy h2 {
+  max-width: 640px;
+  margin-bottom: 18px;
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 3.3rem);
+}
+
+.trainingCopy > p:not(.trainingEyebrow) {
+  max-width: 610px;
+  margin-bottom: 28px;
+  color: #e2eaff;
+  line-height: 1.75;
+}
+
+.trainingCopy :global(.button) {
+  color: #fff;
+  border-color: #ffad85;
+}
+
+.trainingCopy :global(.button):hover {
+  color: #06174b;
+  background: #ffad85;
+}
+
+.trainingNumber {
+  position: absolute;
+  right: 38px;
+  top: 16px;
+  color: rgba(255, 255, 255, .06);
+  font-size: clamp(9rem, 18vw, 17rem);
+  font-weight: 800;
+  line-height: 1;
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .trainingSection {
+    padding: 0 0 78px;
+  }
+
+  .trainingPanel {
+    grid-template-columns: 1fr;
+    gap: 23px;
+  }
+
+  .trainingNumber {
+    right: 14px;
+    top: 100px;
+  }
+}

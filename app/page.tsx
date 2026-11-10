@@ -10,7 +10,7 @@ import { featuredProjects, services } from "./lib/site";
 
 export const metadata = pageMetadata({
   title: "Land Surveying & Geospatial Services in Lagos",
-  description: "Professional land surveying in Lagos, Nigeria. Cadastral and boundary surveys, topographic mapping, construction setting-out, hydrographic surveys and GIS.",
+  description: "Professional land surveying, geospatial mapping and practical surveying training in Lagos, Nigeria. Cadastral, boundary, topographic, hydrographic and construction services.",
   path: "/",
 });
 
