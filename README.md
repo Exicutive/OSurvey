@@ -48,15 +48,13 @@ The Contact and Request a Plan forms post to `app/api/enquiries/route.ts`. The r
 3. In Apps Script **Project Settings** → **Script Properties**, add:
    - `SPREADSHEET_ID`: the ID copied from the Google Sheet.
    - `WEBHOOK_TOKEN`: a newly generated, long random secret. Use the same value only in the server environment and Apps Script properties.
+   - `NOTIFICATION_EMAIL`: `info@example.com` (or another inbox where you want new-submission alerts).
 4. Deploy the Apps Script as a **Web app**, executing as your account and allowing access to **Anyone** so the website server can call it. The script checks the shared secret before writing anything. Copy the deployed `/exec` URL.
 5. Add these server-only environment variables to Render (the Blueprint declares them as manually supplied secrets):
    - `GOOGLE_SHEETS_WEB_APP_URL`: the deployed Apps Script `/exec` URL.
    - `GOOGLE_SHEETS_WEB_APP_TOKEN`: the same secret as `WEBHOOK_TOKEN`.
 6. If testing locally, add the same two variables to `.env.local`. Do not prefix them with `NEXT_PUBLIC_` or commit their values.
-7. Redeploy the site and submit a test from both forms. The script creates column headings on the first submission and records the originating form.
+7. Redeploy the Apps Script after saving code or changing properties. On the first submission, Google will ask the script owner to authorize access to the Sheet and permission to send email. Redeploy the site and submit a test from both forms. The script creates column headings on the first submission and records the originating form.
 
-The web app endpoint is publicly reachable by design; keep the token secret, do not log it, and redeploy the Apps Script if its access settings or code change. Avoid collecting sensitive documents or unnecessary personal information in the free-text field.
+Email alerts are sent by the Google account that owns/runs the Apps Script and delivered to `NOTIFICATION_EMAIL`. The enquiry is recorded in the Sheet first; if sending the alert fails, the form still confirms receipt and avoids encouraging duplicate submissions. The web app endpoint is publicly reachable by design; keep the token secret, do not log it, and redeploy the Apps Script if its access settings or code change. Avoid collecting sensitive documents or unnecessary personal information in the free-text field.
 
-## Images
-
-The current layout uses generic Unsplash photographs as illustrative placeholders. Replace them with licensed/approved imagery and use only verified project images in the project gallery.

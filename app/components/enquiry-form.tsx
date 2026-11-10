@@ -13,7 +13,7 @@ export function EnquiryForm({ compact = false, formType, selectedService = "" }:
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault(); setStatus("sending"); setMessage("");
     const form = event.currentTarget;
-    try { const formData = new FormData(form); formData.set("formType", formType); const res = await fetch("/api/enquiries", { method: "POST", body: formData }); const data = await res.json(); if (!res.ok) throw new Error(data.message || "Unable to send your enquiry."); setStatus("sent"); setMessage("Thank you — your enquiry was sent successfully."); form.reset(); }
+    try { const formData = new FormData(form); formData.set("formType", formType); const res = await fetch("/api/enquiries", { method: "POST", body: formData }); const data = await res.json(); if (!res.ok) throw new Error(data.message || "Unable to send your enquiry."); setStatus("sent"); setMessage(data.message || "Thank you — your enquiry was sent successfully."); form.reset(); }
     catch (error) { setStatus("error"); setMessage(error instanceof Error ? error.message : "Unable to send your enquiry."); }
   }
   return (

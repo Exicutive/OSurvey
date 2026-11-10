@@ -52,6 +52,7 @@ function doPost(event) {
     return jsonResponse({ ok: false, message: "Spreadsheet is not configured." });
   }
 
+  const receivedAt = new Date();
   const lock = LockService.getScriptLock();
   lock.waitLock(10000);
   try {
@@ -61,7 +62,7 @@ function doPost(event) {
     }
 
     sheet.appendRow([
-      new Date(),
+      receivedAt,
       safeCell(enquiry.formType === "contact" ? "Contact page" : "Request a Plan"),
       safeCell(enquiry.name),
       safeCell(enquiry.phone),
@@ -75,7 +76,42 @@ function doPost(event) {
     lock.releaseLock();
   }
 
-  return jsonResponse({ ok: true });
+  let alertSent = false;
+  const notificationEmail = properties.getProperty("NOTIFICATION_EMAIL");
+  if (notificationEmail) {
+    try {
+      const formName = enquiry.formType === "contact" ? "Contact page" : "Request a Plan";
+      const subject = `New ${formName} enquiry: ${enquiry.name}`;
+      const message = [
+        `A new enquiry was submitted through the ${formName} form.`,
+        "",
+        `Received: ${receivedAt.toLocaleString()}`,
+        `Name: ${enquiry.name}`,
+        `Phone: ${enquiry.phone}`,
+        `Email: ${enquiry.email}`,
+        `Preferred contact method: ${enquiry.contactMethod || "Not specified"}`,
+        `Service: ${enquiry.service}`,
+        `Location: ${enquiry.location || "Not specified"}`,
+        "",
+        "Project description:",
+        enquiry.description,
+      ].join("\n");
+
+      MailApp.sendEmail({
+        to: notificationEmail,
+        subject: subject,
+        body: message,
+        name: "OSurvey enquiries",
+      });
+      alertSent = true;
+    } catch (error) {
+      console.error("Enquiry saved, but email alert failed:", error);
+    }
+  } else {
+    console.error("Enquiry saved, but NOTIFICATION_EMAIL is not configured.");
+  }
+
+  return jsonResponse({ ok: true, alertSent: alertSent });
 }
 
 function safeCell(value) {

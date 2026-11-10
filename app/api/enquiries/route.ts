@@ -78,14 +78,18 @@ export async function POST(request: Request) {
       cache: "no-store",
       signal: AbortSignal.timeout(10000),
     });
-    const result = await response.json() as { ok?: boolean };
+    const result = await response.json() as { ok?: boolean; alertSent?: boolean };
 
     if (!response.ok || !result.ok) {
       console.error("Google Sheets rejected an enquiry", { status: response.status });
       return NextResponse.json({ message: "We could not deliver your enquiry. Please try again or contact us directly." }, { status: 502 });
     }
 
-    return NextResponse.json({ message: "Enquiry sent successfully." });
+    return NextResponse.json({
+      message: result.alertSent === false
+        ? "Your enquiry was received, but the email alert could not be sent. You do not need to submit it again."
+        : "Thank you — your enquiry was sent successfully.",
+    });
   } catch (error) {
     console.error("Google Sheets enquiry delivery failed", error instanceof Error ? error.message : "Unknown delivery error");
     return NextResponse.json({ message: "We could not deliver your enquiry. Please try again or contact us directly." }, { status: 502 });
