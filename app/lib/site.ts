@@ -49,7 +49,7 @@ export const services: Service[] = [
     overview: "A practical site-based review of existing boundary evidence, marks and survey information.",
     for: "Owners, neighbours and buyers who need boundary clarity.",
     benefit: "Helps inform discussions and next steps with a measured understanding of the site.",
-    image: "/images/topographic-survey-total-station.jpg",
+    image: "/images/topographic-survey-total-station.jpeg",
   },
   {
     slug: "topographic-surveys",
@@ -67,7 +67,7 @@ export const services: Service[] = [
     overview: "Support construction with measured control, set-out points and checks against agreed drawings.",
     for: "Contractors, engineers, architects and project managers.",
     benefit: "Supports orderly construction coordination and reduces avoidable dimensional uncertainty.",
-    image: "/images/field-surveyor-total-station.jpg",
+    image: "/images/field-surveyor-total-station.jpeg",
   },
   {
     slug: "subdivision-layout",

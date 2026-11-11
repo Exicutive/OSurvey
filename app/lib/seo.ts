@@ -14,7 +14,7 @@ export function jsonLd(type: "website" | "business" | "service", extra: Record<s
       url: site.url,
       description: site.description,
       telephone: site.phone,
-      image: absoluteUrl("/images/field-surveyor-total-station.jpg"),
+      image: absoluteUrl("/images/field-surveyor-total-station.jpeg"),
       logo: absoluteUrl("/images/lutex-survey-logo-cropped.jpeg"),
       contactPoint: {
         "@type": "ContactPoint",

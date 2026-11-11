@@ -13,7 +13,7 @@ export function pageMetadata({
   title,
   description,
   path,
-  image = "/images/field-surveyor-total-station.jpg",
+  image = "/images/field-surveyor-total-station.jpeg",
   imageAlt = "Land surveyor carrying out field measurements",
 }: PageMetadata): Metadata {
   const imageUrl = absoluteUrl(image);
