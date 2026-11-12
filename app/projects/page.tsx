@@ -14,6 +14,19 @@ export const metadata: Metadata = pageMetadata({
   path: "/projects",
 });
 
+const projectPlans = [
+  {
+    image: "/images/site_layout_plan.jpeg",
+    alt: "Estate site layout plan showing plots, roads, a commercial parcel and linear park",
+    label: "Site layout plan",
+  },
+  {
+    image: "/images/development_master_plan.jpeg",
+    alt: "Development master plan showing plotted blocks, amenities, roads and waterfront landscaping",
+    label: "Development master plan",
+  },
+] as const;
+
 export default function ProjectsPage() {
   return (
     <main>
@@ -91,6 +104,28 @@ export default function ProjectsPage() {
                   <p>{project.description}</p>
                 </div>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.projectPlans}>
+        <div className="shell">
+          <div className={styles.sectionHeading}>
+            <div>
+              <p className="eyebrow">Project plans</p>
+              <h2>Layouts made<br /><em>clear and practical.</em></h2>
+            </div>
+            <p>Illustrative layouts prepared to make plot arrangements, access routes and key site features easier to understand.</p>
+          </div>
+          <div className={styles.planGrid}>
+            {projectPlans.map((plan) => (
+              <figure className={styles.planCard} key={plan.image}>
+                <div className={styles.planImage}>
+                  <Image src={plan.image} alt={plan.alt} fill sizes="(max-width: 800px) 100vw, 50vw" />
+                </div>
+                <figcaption>{plan.label}</figcaption>
+              </figure>
             ))}
           </div>
         </div>

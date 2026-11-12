@@ -276,6 +276,47 @@
   line-height: 1.65;
 }
 
+.projectPlans {
+  padding: 108px 0;
+  background: #f4f7ff;
+}
+
+.planGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.planCard {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(9, 43, 131, .14);
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(9, 43, 131, .06);
+}
+
+.planImage {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+  background: #eef2ed;
+}
+
+.planImage img {
+  object-fit: contain;
+  padding: 14px;
+}
+
+.planCard figcaption {
+  padding: 16px 19px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
 .closing {
   padding: 66px 0;
   color: #fff;
@@ -336,6 +377,10 @@
   .estates {
     padding: 80px 0;
   }
+
+  .projectPlans {
+    padding: 80px 0;
+  }
 }
 
 @media (max-width: 500px) {
@@ -364,6 +409,14 @@
 
   .estateImage {
     aspect-ratio: 1.55;
+  }
+
+  .planGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .planImage {
+    height: 460px;
   }
 
   .closing > div {
